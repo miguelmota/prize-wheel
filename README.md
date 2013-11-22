@@ -2,7 +2,9 @@
 
 Roulette wheel using canvas.
 
-[www.wheeljs.org](http://www.wheeljs.org/)
+## Demo
+
+[http://www.wheeljs.org](http://www.wheeljs.org/)
 
 ### Usage
 
