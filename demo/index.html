@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wheel.js</title>
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="shortcut icon" href="http://www.miguelmota.com/favicon.ico">
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1>Wheel.js</h1>
+    <a href="https://github.com/miguelmota/wheel" target="_blank">Github</a>
+  </header>
+
+  <section class="wheel-container">
+    <canvas id="wheel-1"></canvas>
+  </section>
+
+  <section class="actions">
+    <button class="btn-spin punch">Spin!</button>
+  </section>
+
+  <section class="code">
+    <pre>
+    &lt;canvas id="wheel"&gt;&lt;/canvas&gt;
+
+    &lt;script src="wheel.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+
+      var settings = {
+        el: 'wheel',
+        members: ['Hamburgers', 'Tacos', 'Steak', 'Burritos'],
+        colors: ['#C7181D', '#FCB937', '#A1B836', '#371979'],
+        radius: 250
+      };
+
+      var wheel = new Wheel(settings);
+
+      wheel.init();
+      wheel.spin(function(member) {
+        alert(member);
+      });
+
+    &lt;/script&gt;
+    </pre>
+  </section>
+
+</div>
+
+<script src="../src/wheel.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>
