@@ -10,7 +10,8 @@ Roulette wheel using canvas.
  <canvas id="wheel"></canvas>
 ```
 
-```                                                                                                            <script src="wheel.js"></script>
+```
+<script src="wheel.js"></script>
 ```
 
 ```
@@ -32,5 +33,3 @@ wheel.spin(function(member) {
 ## License
 
 Released under the MIT License.
-
-
