@@ -2,13 +2,13 @@
 
 Roulette wheel using canvas.
 
-[www.wheeljs.org][http://www.wheeljs.org/]
+[www.wheeljs.org](http://www.wheeljs.org/)
 
 ### Usage
 
 ```
  <canvas id="wheel"></canvas>
-``
+```
 
 ```                                                                                                            <script src="wheel.js"></script>
 ```
