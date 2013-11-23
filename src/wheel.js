@@ -59,33 +59,14 @@
           for (i = 0; i < s.members.length; i++) {
             angle = s.startAngle + i * s.arc;
              
-            if (i==10) {
-              (function() {
-                var img = new Image();
-                img.src = 'http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Pi_pie2.jpg/220px-Pi_pie2.jpg';
-                img.onload = function() {
-                  var pattern = ctx.createPattern(img, 'repeat');
-                  ctx.fillStyle = pattern;
-                  //ctx.fillRect(0,0,200,200);
-                  ctx.beginPath();
-                  ctx.arc(s.width / 2, s.height / 2, s.outsideRadius, angle, angle + s.arc, false);
-                  ctx.arc(s.width / 2, s.height / 2, s.insideRadius, angle + s.arc, angle, true);
-                  ctx.stroke();
-                  ctx.fill();
-                  ctx.save();
-                };
-              })();
-            } else {
-              ctx.fillStyle = s.colors[i];
-              ctx.beginPath();
-              ctx.arc(s.width / 2, s.height / 2, s.outsideRadius, angle, angle + s.arc, false);
-              ctx.arc(s.width / 2, s.height / 2, s.insideRadius, angle + s.arc, angle, true);
-              ctx.stroke();
-              ctx.fill();
-              ctx.save();
-            }
+            ctx.fillStyle = s.colors[i];
+            ctx.beginPath();
+            ctx.arc(s.width / 2, s.height / 2, s.outsideRadius, angle, angle + s.arc, false);
+            ctx.arc(s.width / 2, s.height / 2, s.insideRadius, angle + s.arc, angle, true);
+            ctx.stroke();
+            ctx.fill();
+            ctx.save();
 
-           
             ctx.shadowOffsetX = -1;
             ctx.shadowOffsetY = -1;
             ctx.shadowBlur = 0;
