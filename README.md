@@ -8,7 +8,7 @@ Roulette wheel using canvas.
 
 ### Download
 
-Available via [Bower](http://bower.io/)
+Available via [Bower](http://bower.io/).
 
 ```
 bower install wheel
