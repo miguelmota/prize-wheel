@@ -1,4 +1,4 @@
-## Wheel.js
+## Wheel.js v1.0.0
 
 Roulette wheel using canvas.
 
