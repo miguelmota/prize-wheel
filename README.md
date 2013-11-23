@@ -4,7 +4,7 @@ Roulette wheel using canvas.
 
 ### Demo
 
-[http://www.wheeljs.org](http://www.wheeljs.org/)
+[http://wheeljs.org/](http://www.wheeljs.org/)
 
 ### Download
 
