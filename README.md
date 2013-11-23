@@ -6,15 +6,29 @@ Roulette wheel using canvas.
 
 [http://www.wheeljs.org](http://www.wheeljs.org/)
 
+### Download
+
+Available via [Bower](http://bower.io/)
+
+```
+bower install wheel
+```
+
 ### Usage
+
+Include `wheel.js` in your project.
+
+```
+<script src="wheel.js"></script>
+```
+
+Create a canvas element and give it an id.
 
 ```
 <canvas id="wheel"></canvas>
 ```
 
-```
-<script src="wheel.js"></script>
-```
+Initialize the wheel.
 
 ```
 // Wheel settings object.
