@@ -1,12 +1,12 @@
-## Wheel.js v1.0.0
+# Wheel.js v0.1.0
 
 Roulette wheel using canvas.
 
-### Demo
+## Demo
 
-[http://wheeljs.org/](http://www.wheeljs.org/)
+[http://lab.miguelmota.com/wheel](http://lab.miguelmota.com/wheel)
 
-### Download
+## Download
 
 Available via [Bower](http://bower.io/).
 
@@ -14,7 +14,7 @@ Available via [Bower](http://bower.io/).
 bower install wheel
 ```
 
-### Usage
+## Usage
 
 Include `wheel.js` in your project.
 
