@@ -18,19 +18,19 @@ bower install wheel
 
 Include `wheel.js` in your project.
 
-```
+```html
 <script src="wheel.js"></script>
 ```
 
 Create a canvas element and give it an id.
 
-```
+```html
 <canvas id="wheel"></canvas>
 ```
 
 Initialize the wheel.
 
-```
+```javascript
 // Wheel settings object.
 var settings = {                                                         
   el: 'wheel', // Canvas id.
