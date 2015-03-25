@@ -81,14 +81,14 @@
           //Arrow
           ctx.fillStyle = "black";
           ctx.beginPath();
-          ctx.moveTo(250 - 4, 250 - (s.outsideRadius + 5));
-          ctx.lineTo(250 + 4, 250 - (s.outsideRadius + 5));
-          ctx.lineTo(250 + 4, 250 - (s.outsideRadius - 5));
-          ctx.lineTo(250 + 9, 250 - (s.outsideRadius - 5));
-          ctx.lineTo(250 + 0, 250 - (s.outsideRadius - 13));
-          ctx.lineTo(250 - 9, 250 - (s.outsideRadius - 5));
-          ctx.lineTo(250 - 4, 250 - (s.outsideRadius - 5));
-          ctx.lineTo(250 - 4, 250 - (s.outsideRadius + 5));
+          ctx.moveTo(s.radius - 4, s.radius - (s.outsideRadius + 5));
+          ctx.lineTo(s.radius + 4, s.radius - (s.outsideRadius + 5));
+          ctx.lineTo(s.radius + 4, s.radius - (s.outsideRadius - 5));
+          ctx.lineTo(s.radius + 9, s.radius - (s.outsideRadius - 5));
+          ctx.lineTo(s.radius + 0, s.radius - (s.outsideRadius - 13));
+          ctx.lineTo(s.radius - 9, s.radius - (s.outsideRadius - 5));
+          ctx.lineTo(s.radius - 4, s.radius - (s.outsideRadius - 5));
+          ctx.lineTo(s.radius - 4, s.radius - (s.outsideRadius + 5));
           ctx.fill();
         }
       };
