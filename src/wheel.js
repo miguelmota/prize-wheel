@@ -20,7 +20,8 @@
       members: ['Member 1', 'Member 2', 'Member 3', 'Member 4'],
       colors: ['#C7181D', '#FCB937', '#A1B836', '#371979', '#C7181D', '#FCB937', '#A1B836', '#371979'],
       radius: 250,
-      startAngle: 0
+      startAngle: 0,
+      textRadius: 160
     };
 
     // s for settings
@@ -36,7 +37,6 @@
     s.spinTime =  0;
     s.spinTimeTotal =  0;
     s.spinAngleStart =  null;
-    s.textRadius = 160;
 
     this.draw = function() {
         var angle,
@@ -81,14 +81,14 @@
           //Arrow
           ctx.fillStyle = "black";
           ctx.beginPath();
-          ctx.moveTo(250 - 4, 250 - (s.outsideRadius + 5));
-          ctx.lineTo(250 + 4, 250 - (s.outsideRadius + 5));
-          ctx.lineTo(250 + 4, 250 - (s.outsideRadius - 5));
-          ctx.lineTo(250 + 9, 250 - (s.outsideRadius - 5));
-          ctx.lineTo(250 + 0, 250 - (s.outsideRadius - 13));
-          ctx.lineTo(250 - 9, 250 - (s.outsideRadius - 5));
-          ctx.lineTo(250 - 4, 250 - (s.outsideRadius - 5));
-          ctx.lineTo(250 - 4, 250 - (s.outsideRadius + 5));
+          ctx.moveTo(s.radius - 4, s.radius - (s.outsideRadius + 5));
+          ctx.lineTo(s.radius + 4, s.radius - (s.outsideRadius + 5));
+          ctx.lineTo(s.radius + 4, s.radius - (s.outsideRadius - 5));
+          ctx.lineTo(s.radius + 9, s.radius - (s.outsideRadius - 5));
+          ctx.lineTo(s.radius + 0, s.radius - (s.outsideRadius - 13));
+          ctx.lineTo(s.radius - 9, s.radius - (s.outsideRadius - 5));
+          ctx.lineTo(s.radius - 4, s.radius - (s.outsideRadius - 5));
+          ctx.lineTo(s.radius - 4, s.radius - (s.outsideRadius + 5));
           ctx.fill();
         }
       };
