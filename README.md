@@ -1,6 +1,6 @@
 # prize-wheel
 
-Prize wheel using canvas.
+> Prize wheel using canvas.
 
 <img src="https://raw.githubusercontent.com/miguelmota/prize-wheel/master/screenshot.gif" width="500" />
 
