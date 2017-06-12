@@ -1,4 +1,4 @@
-(function() {
+(function(root) {
   'use strict';
 
   function _merge(obj1,obj2){
@@ -8,13 +8,13 @@
     return obj3;
   }
 
-  var Wheel = function(options) {
+  var PrizeWheel = function(options) {
     var _this = this,
         defaults,
         s,
         ctx,
         canvas;
- 
+
    defaults = {
       el: null,
       members: ['Member 1', 'Member 2', 'Member 3', 'Member 4'],
@@ -24,7 +24,7 @@
       textRadius: 160
     };
 
-    // s for settings 
+    // s for settings
     s = _merge(defaults, options);
 
     s.width = s.height = s.radius * 2;
@@ -43,22 +43,22 @@
             text,
             i;
 
-        canvas = document.getElementById(s.el);
+        canvas = document.querySelector(s.el);
         canvas.width = s.width;
         canvas.height = s.height;
         if (canvas.getContext) {
 
           ctx = canvas.getContext('2d');
           ctx.clearRect(0, 0, s.width, s.height);
-          
+
           ctx.strokeStyle = 'black';
           ctx.lineWidth = 2;
-          
+
           ctx.font = '16px sans-serif';
-      
+
           for (i = 0; i < s.members.length; i++) {
             angle = s.startAngle + i * s.arc;
-             
+
             ctx.fillStyle = s.colors[i];
             ctx.beginPath();
             ctx.arc(s.width / 2, s.height / 2, s.outsideRadius, angle, angle + s.arc, false);
@@ -76,8 +76,8 @@
             text = s.members[i];
             ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
             ctx.restore();
-          } 
-          
+          }
+
           //Arrow
           ctx.fillStyle = "black";
           ctx.beginPath();
@@ -105,7 +105,6 @@
       this.rotate = function() {
         var spinAngle;
         s.spinTime += 30;
-        console.log(s.spinTime);
         if((s.spinTime + 5000) >= s.spinTimeTotal) {
           _this.stop();
           return;
@@ -121,7 +120,6 @@
           s.spinAngleStart = Math.random() * 10 + 10;
           s.spinTime = 0;
           s.spinTimeTotal = Math.random() * 3 + 4 * 3000;
-          console.log('spinTimeTotal: %d', s.spinTimeTotal);
           _this.rotate();
       };
 
@@ -139,16 +137,26 @@
       };
 
       this.done = function(member) {
-        console.log(member);
         _this.cb(member);
       };
-    
+
     return {
       init: _this.draw,
       spin: _this.spin
     };
   };
 
-  window.Wheel = window.Wheel || Wheel;
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = PrizeWheel;
+    }
+    exports.PrizeWheel = PrizeWheel;
+  } else if (typeof define === 'function' && define.amd) {
+    define([], function() {
+      return PrizeWheel;
+    });
+  } else {
+    root.PrizeWheel = PrizeWheel;
+  }
 
-})();
+})(this);

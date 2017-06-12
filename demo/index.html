@@ -2,35 +2,20 @@
 <html>
 <head>
   <meta charset="utf-8">
-<!--
-                ___                          ___                              
-               (   )                        (   )                             
- ___  ___  ___  | | .-.     .--.     .--.    | |             .-.      .--.    
-(   )(   )(   ) | |/   \   /    \   /    \   | |            ( __)   /  _  \   
- | |  | |  | |  |  .-. .  |  .-. ; |  .-. ;  | |            (''")  . .' `. ;  
- | |  | |  | |  | |  | |  |  | | | |  | | |  | |             | |   | '   | |  
- | |  | |  | |  | |  | |  |  |/  | |  |/  |  | |             | |   _\_`.(___) 
- | |  | |  | |  | |  | |  |  ' _.' |  ' _.'  | |             | |  (   ). '.   
- | |  ; '  | |  | |  | |  |  .'.-. |  .'.-.  | |   .-.       | |   | |  `\ |  
- ' `-'   `-' '  | |  | |  '  `-' / '  `-' /  | |  (   )  ___ | |   ; '._,' '  
-  '.__.'.__.'  (___)(___)  `.__.'   `.__.'  (___)  `-'  (   )' |    '.___.'   
-                                                         ; `-' '              
-                                                          .__.'               
---
--->
-  <title>Wheel.js</title>
+  <title>prize-wheel.js</title>
   <link rel="stylesheet" href="css/demo.css" />
   <link rel="shortcut icon" href="http://www.miguelmota.com/favicon.ico">
 </head>
 <body>
 <div class="container">
   <header class="header">
-    <h1>Wheel.js</h1>
-    <a href="https://github.com/miguelmota/wheel" target="_blank">Fork on Github</a>
+    <h1>prize-wheel.js</h1>
+    <a href="https://github.com/miguelmota/prize-wheel" target="_blank">Fork on Github</a>
   </header>
 
   <section class="wheel-container">
     <canvas id="wheel-1"></canvas>
+    <output id="output"></output>
   </section>
 
   <section class="actions">
@@ -46,13 +31,13 @@
     &lt;script&gt;
 
       var settings = {
-        el: 'wheel',
+        el: '#wheel',
         members: ['Hamburgers', 'Tacos', 'Steak', 'Burritos'],
         colors: ['#C7181D', '#FCB937', '#A1B836', '#371979'],
         radius: 250
       };
 
-      var wheel = new Wheel(settings);
+      var wheel = new PrizeWheel(settings);
 
       wheel.init();
       wheel.spin(function(member) {
@@ -69,7 +54,7 @@
 
 </div>
 
-<script src="../src/wheel.js"></script>
+<script src="../prize-wheel.js"></script>
 <script src="js/demo.js"></script>
 </body>
 </html>

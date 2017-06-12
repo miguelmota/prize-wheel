@@ -1,33 +1,30 @@
 {
-  "name": "wheel",
-  "version": "1.0.0",
-  "description": "Roulette wheel using canvas.",
-  "main": "dist/wheel.js",
+  "name": "prize-wheel",
+  "version": "0.0.1",
+  "description": "Prize wheel using canvas.",
+  "main": "prize-wheel.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "echo 'no tests'"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/miguelmota/wheel.git"
+    "url": "https://github.com/miguelmota/prize-wheel.git"
   },
   "keywords": [
-    "wheel"
+    "prize",
+    "wheel",
+    "roulette"
   ],
-  "author": "Miguel Mota",
+  "author": {
+    "name": "Miguel Mota",
+    "email": "hello@miguelmota.com",
+    "url": "http://www.miguelmota.com/"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/miguelmota/wheel/issues"
+    "url": "https://github.com/miguelmota/prize-wheel/issues"
   },
   "dependencies": {
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-compass": "~0.6.0",
-    "grunt-shell": "~0.6.1",
-    "grunt-contrib-htmlmin": "~0.1.3",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-cli": "~0.1.11",
-    "grunt-contrib-uglify": "~0.2.7",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt": "~0.4.2",
-    "grunt-contrib-copy": "~0.4.1"
+
   }
 }
